@@ -1,8 +1,12 @@
+import ReactDOM from "react-dom";
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return (
+  const root = ReactDOM.createRoot(
+    document.getElementById('root')
+  );
+  const element = (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -17,9 +21,14 @@ function App() {
         >
           Learn React
         </a>
+        <h2>It is {new Date().toLocaleTimeString()}.</h2>
       </header>
     </div>
   );
+  root.render(element);
 }
+setInterval(App, 1000);
 
 export default App;
+
+
