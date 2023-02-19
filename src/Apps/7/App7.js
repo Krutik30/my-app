@@ -1,4 +1,4 @@
-import react , {useState} from 'react';
+import {useState} from 'react';
 
 function App7(){
 
@@ -19,7 +19,7 @@ function App7(){
 
     return (
         <div>
-            <h1>Hello</h1>
+            <h1>Hello , {headingText}</h1>
             <input className="d-block" type="text" placeholder="What's your name?" />
             <button
                 style={{background: isMouseOver? "black" : "white"}}
