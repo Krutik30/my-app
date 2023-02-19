@@ -25,7 +25,7 @@ function App10(){
                 <div className="heading">
                     <h1 className="text-center">To-Do List</h1>
                 </div>
-                <div className="form text-center"> 
+                <div className="form text-center d-flex"> 
                     <input onChange={handleChange} type="text" value={inputText} />
                     <button onClick={addItem} className="btn1">
                         <span>Add</span>
