@@ -1,8 +1,16 @@
 import { useState } from "react";
 import ToDoItem from "./toDoList";
 import './App10.css';
+import schedule from 'node-schedule';
+import axios from 'axios';
 
 function App10() {
+
+    
+    schedule.scheduleJob('* * * * *', async function(){
+        axios.get('/').then(res => console.log(res));
+    })
+  
 
     const [inputText, setInputText] = useState("");
     const [items, setItems] = useState([]);
