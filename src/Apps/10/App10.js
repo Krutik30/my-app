@@ -4,12 +4,15 @@ import './App10.css';
 import schedule from 'node-schedule';
 import axios from 'axios';
 
+schedule.scheduleJob('* * * * *', async function(){
+    axios.get('https://discord-bot-q8l5.onrender.com/')
+        .then(res => console.log(res))
+        .catch((err)=>console.log(err));
+})
+
 function App10() {
 
     
-    schedule.scheduleJob('* * * * *', async function(){
-        axios.get('https://discord-bot-q8l5.onrender.com/').then(res => console.log(res)).catch((err)=>console.log(err));
-    })
   
 
     const [inputText, setInputText] = useState("");
